@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>TodoListApp</title>
+</head>
+<body>
+    <main>
+        <h1>My TodoList App</h1>
+        <button id="dlt">Delette All</button>
+        <br/><br/>
+        <ul>
+
+        </ul>
+    </main>
+    <button id="plusTask">+</button>
+    <div class="newTask">
+        <section class="newTask__content">
+            <h2>Add a new task</h2>
+            <label for="taskName">Task Name</label>
+            <input type="text" name="task" id="taskName">
+                <br/>
+                <label for="desc">Description</label>
+                <textarea name="desc" id="desc" cols="34" rows="10"></textarea>
+            <button id="addTask">Add Task</button>
+        </section>
+    </div>
+</body>
+<script src="src/js/main.js"></script>
+</html>

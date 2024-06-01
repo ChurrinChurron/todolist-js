@@ -1,0 +1,277 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    position: relative;
+    padding: 3em 1.5em;
+    background-color: #BB27A7;
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+}
+
+main {
+
+    max-width: 26em;
+    margin: 0 auto;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+h1 {
+
+    margin-bottom: 1.4em;
+    font-size: 2.4em;
+    color: #fff;
+}
+
+ul {
+
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    list-style: none;
+    width: 95%;
+    max-width: 23em;
+}
+
+li {
+
+    position: relative;
+    padding: 1em;
+    border-radius: 0.2em;
+    background-color: #fff;
+    border: 1px solid #D9D9D9;
+}
+
+li h2 {
+
+    margin-bottom: 1.2em;
+    color: #BB27A7;
+    font-size: 1.6em;
+}
+
+.showMore.show ~ .date {
+
+    margin-bottom: 0.8em;
+}
+
+.showMore.show ~ #description {
+
+    display: block;
+}
+
+.date {
+
+    display: flex;
+    gap: 0 1em;
+    margin-bottom: 3em;
+}
+
+
+.date time {
+
+    color: #BB27A7;
+}
+
+#description {
+
+    font-size: 0.9em;
+    line-height: 1.4em;
+    margin-bottom: 3em;
+    display: none;
+}
+
+.showMore {
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0.7em 1em;
+    border: none;
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.880em;
+    color: #BB27A7;
+    background-color: #D9D9D9;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.showMore:hover {
+
+    background-color: #f1ccec;
+}
+
+#plusTask {
+
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    padding: 0.1em 0.450em;
+    border-radius: 50%;
+    font-size: 2.2em;
+    font-weight: 800;
+    border: 4px dashed #000;
+    background-color: #4FFFDF;
+    transition: .3s;
+    cursor: pointer;
+}
+
+#plusTask:hover {
+
+    background-color: #aefff0;
+}
+
+.newTask {
+
+    position: absolute;
+    left: 0;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    padding: 3em 1.5em;
+    background-color: #fff;
+    transition: .7s;
+}
+
+.newTask.open {
+
+    top: 0;
+}
+
+.newTask__content {
+
+    max-width: 26em;
+    margin: 0 auto;
+    position: relative;
+    display: grid;
+}
+
+.newTask__content h2 {
+
+    margin-bottom: 1.7em;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.newTask__content label {
+
+    font-weight: 700;
+    margin-bottom: 0.4em;
+    font-size: 0.940em;
+}
+
+.newTask__content input[type="text"] {
+
+    border: none;
+    outline: none;
+    padding: 0.9em 1em;
+    margin-bottom: 1em;
+    background-color: #BB27A7;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.940em;
+}
+
+.selectDate {
+
+    display: flex;
+    gap: 0 1.8em;
+    margin-bottom: 3em;
+}
+
+.select {
+
+    position: relative;
+}
+
+.selectDate select {
+
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appareance: none;
+    border: none;
+    outline: none;
+    position: relative;
+    padding: 0.4em 0.8em;
+    width: 5.5em;
+    font-size: 1.3em;
+    background-color: #BB27A7;
+    color: #fff;
+    cursor: pointer;
+}
+
+.select::after {
+
+    content: '▼';
+    position: absolute;
+    display: inline-block;
+    font-size: 1.7em;
+    right: 0.2em;
+    top: 0.2em;
+    color: #fff;
+    pointer-events: none;
+}
+
+.newTask__content textarea {
+
+    border: none;
+    outline: none;
+    margin-top: 0.6em;
+    padding: 0.7em 1em;
+    font-weight: 700;
+    font-size: 0.920em;
+    background-color: #BB27A7;
+    color: #fff;
+    resize: none;
+    font-family: "Roboto", sans-serif;
+}
+
+#addTask {
+
+    position: relative;
+    bottom: -10em;
+    padding: 0.6em 0.450em;
+    border-radius: 1.8em;
+    font-size: 1.4em;
+    font-weight: 800;
+    border: 4px dashed #000;
+    background-color: #4FFFDF;
+    transition: .3s;
+    cursor: pointer;
+}
+
+#addTask:hover {
+
+    background-color: #aefff0;
+}
+
+#dlt  {
+    font-weight: 700;
+    font-size: 1em;
+    padding: 1em;
+    background: rgb(228, 124, 124);
+    border: 2px dashed #000;
+    cursor: pointer;
+}
+
+.dltTodo {
+    position: absolute;
+    right: .9em;
+    top: .9em;
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: .1em .4em;
+    border-radius: .3em;
+    background: rgb(252, 108, 108);
+    color: #fff;
+    cursor: pointer;
+}
